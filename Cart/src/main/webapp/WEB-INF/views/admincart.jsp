@@ -35,7 +35,7 @@ function goBack() {
 					<td class="col-sm-8 col-md-6">
                         <div class="media">
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Userid:${cart.userid }</a></h4>
+                               <%--  <h4 class="media-heading"><a href="#">Userid:${cart.userid }</a></h4> --%>
                                 <h4 class="media-heading"><a href="#">User emailid:${cart.emailid }</a></h4>
                                 
                                 </div>
@@ -48,7 +48,7 @@ function goBack() {
                                 <h4 class="media-heading"><a href="#">${cart.id}</a></h4>
 								<h4 class="media-heading"><a href="#">${cart.productName}</a></h4>
                                 <%-- <h5 class="media-heading"> by <a href="#">${product.brand}</a></h5> --%>
-                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                                <span>Status: </span><span class="text-success"><strong>${cart.status}</strong></span>
                             </div>
                         </div></td>
                         <td class="col-sm-1 col-md-1" style="text-align: center">
@@ -59,9 +59,9 @@ function goBack() {
                         <td class="col-sm-1 col-md-1 text-center"><strong>&#x20b9;${cart.price}</strong></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>&#x20b9;${cart.total }</strong></td>
                         <td class="col-sm-1 col-md-1">
-                        <a href="deleteCart?id=${cart.id}"><button type="button" class="btn btn-danger">
+                       <%--  <a href="deleteCart?id=${cart.id}"><button type="button" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></a></td>
+                        </button></a></td> --%>
 						
                     </tr>
                     <!--<tr>
@@ -86,7 +86,7 @@ function goBack() {
                     </tr>-->
                 </tbody>
                 <tfoot>
-                    <tr>
+                    <%-- <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
@@ -94,7 +94,7 @@ function goBack() {
 						<td>
                         <td><h3>Grand Total</h3></td>
                         <td class="text-right"><h3>&#x20b9;${total}</h3></td>
-                    </tr>
+                    </tr> --%>
                     </c:forEach>
                     <tr>
                         <td>     </td>

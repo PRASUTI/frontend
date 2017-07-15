@@ -90,7 +90,7 @@ font-family: 'Ubuntu Mono', monospaced ;
     
   </a></c:if>
   <c:if test="${pageContext.request.userPrincipal.name == null }">
-  <a href="login">
+  <a href="loginPage">
   <button class="btn btn-lg btn-brand btn-full-width"> Add to Cart  </button>
     
   </a></c:if>

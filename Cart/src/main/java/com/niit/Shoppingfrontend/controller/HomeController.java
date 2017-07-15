@@ -22,7 +22,13 @@ public class HomeController {
 		model.addAttribute("productList", productList);
 		return "home";
 	}
-	
+	@RequestMapping("categoryBy")
+	public String categoryBy(@RequestParam(value = "categoryName") String categoryName, Model model) {
+		List<Product> productList = productDAO.getcategoryname(categoryName);
+		model.addAttribute("productList", productList);
+		return "home";
+	}
+
 	@RequestMapping("home")
 	public String homePage1(Model model) {
 		List<Product> productList = productDAO.list();

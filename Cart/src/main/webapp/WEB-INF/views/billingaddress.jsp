@@ -24,7 +24,7 @@
                         <strong>${shipping.address}</strong>
                         
                         <br>
-                        <abbr title="Phone">P:</abbr> (213) 484-6829
+                        <abbr title="Phone">Phone:</abbr>  ${shipping.mobile}
                     </address>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 text-right">

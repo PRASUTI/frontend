@@ -26,7 +26,7 @@
   <center><h3>Payment Mode</h3></center>
   <br>
   
- <a href="cod" class="btn btn-primary">Cash On Delivery</a>
+ <a href="Billingaddress" class="btn btn-primary">Cash On Delivery</a>
  
   <p>   </p>
   <a href="CreditCard" class="btn btn-primary">CreditCard</a>

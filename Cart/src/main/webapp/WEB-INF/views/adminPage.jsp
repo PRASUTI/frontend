@@ -1,6 +1,6 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<%@include file="/WEB-INF/views/menubar.jsp"%>
+<%@include file="/WEB-INF/views/menubar1.jsp"%>
 
 <c:choose>
 
