@@ -4,9 +4,7 @@
 
 <c:choose>
 
-	<c:when test="${not empty isLoggedInAdmin}">
-	hello
-	</c:when>
+	
 
 	<c:when test="${isAdminClickedaddcategoryButton== 'true' }">
 		<%@ include file="category.jsp"%>
@@ -28,6 +26,22 @@
 		<c:when test="${isAdminClickedViewProductButton == 'true' }">
 		<%@ include file="viewproduct.jsp"%>
 	</c:when>
-
+	<c:when test="${editCategoryClicked == 'true' }">
+		<%@ include file="editcategory.jsp"%>
+	</c:when>
+	<c:when test="${editSupplierClicked == 'true' }">
+		<%@ include file="editsupplier.jsp"%>
+	</c:when>
+	<c:when test="${editProductClicked == 'true' }">
+		<%@ include file="editproduct.jsp"%>
+	</c:when>
+	<c:when test="${isAdminClickedCartButton == 'true' }">
+		<%@ include file="admincart.jsp"%>
+	</c:when>
+<c:otherwise>
+<h2>Welcome Admin!!!</h2>
+</c:otherwise>
 
 </c:choose>
+
+

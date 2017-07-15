@@ -32,7 +32,7 @@ public class SupplierController {
 		supplierDAO.saveOrUpdate(supplier);
 		
 		model.addAttribute("message", "Supplier is added");
-		return "adminPage";
+		return "redirect:viewsupplier";
 		
 	}
 	@RequestMapping("viewsupplier")
@@ -51,7 +51,7 @@ public class SupplierController {
 	public String deleteSuppliers(@RequestParam("id") String id, Model model){
 		
 		supplierDAO.delete(id);
-		return "viewsupplier";
+		return "redirect:viewsupplier";
 	}
 	
 	@RequestMapping("editSupplier")
@@ -59,13 +59,17 @@ public class SupplierController {
 		Supplier supplier = supplierDAO.get(id);
 		model.addAttribute("supplier", supplier);
 		model.addAttribute("editSupplierClicked", true);
-		return "viewsupplier";
+		return "adminPage";
 		
 	}
-	@RequestMapping("supplierEdited")
+	@RequestMapping("afterEditSupplier")
 	public String supplierEdited(@ModelAttribute Supplier supplier){
 		
 		supplierDAO.saveOrUpdate(supplier);
-		return "viewsupplier";
+		return "redirect:viewsupplier";
+	}
+	@ModelAttribute
+	public void Supplier(Model model){
+		model.addAttribute("isLoggedInAdmin", "true");
 	}
 }

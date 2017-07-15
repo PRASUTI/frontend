@@ -57,6 +57,8 @@
 							}
 					}
 					}
+							}
+					}
 	return false;
 	}
   
@@ -166,7 +168,7 @@ button {
 				<br>
 				<div style="color: #5cb85c" class="form-group">
 					 <label><b>Stock:</b></label>
-					<input type="text" id="stock" name="stock" placeholder="Enter Price"  class="form-control">
+					<input type="text" id="stock" name="stock" placeholder="Enter Stock"  class="form-control">
 				</div>
 				<br>
 				

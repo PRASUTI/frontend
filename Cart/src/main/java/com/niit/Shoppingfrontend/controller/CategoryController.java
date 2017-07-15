@@ -31,7 +31,7 @@ public class CategoryController {
 		categoryDAO.saveOrUpdate(category);
 	
 		model.addAttribute("message", "Category is added...");
-		return "adminPage";
+		return "redirect:viewcategory";
 		
 	}
 	@RequestMapping("viewcategory")
@@ -49,7 +49,7 @@ public class CategoryController {
 	public String deleteCategorys(@RequestParam("categoryId") String id, Model model){
 		
 		categoryDAO.delete(id);
-		return "viewproduct";
+		return "redirect:viewcategory";
 	}
 	
 	@RequestMapping("editCategory")
@@ -57,14 +57,17 @@ public class CategoryController {
 		Category category = categoryDAO.get(id);
 		model.addAttribute("category", category);
 		model.addAttribute("editCategoryClicked", true);
-		return "viewcategory";
+		return "adminPage";
 		
 	}
-	@RequestMapping("categoryEdited")
+	@RequestMapping("afterEditCategory")
 	public String categoryEdited(@ModelAttribute Category category){
 		
 		categoryDAO.saveOrUpdate(category);
-		return "viewcategory";
+		return "redirect:viewcategory";
 	} 
-	
+	@ModelAttribute
+	public void Category(Model model){
+		model.addAttribute("isLoggedInAdmin", "true");
+	}
 }

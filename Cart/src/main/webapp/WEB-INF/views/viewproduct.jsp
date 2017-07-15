@@ -1,3 +1,4 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -41,13 +42,13 @@ tr:nth-child(even){background-color: #f2f2f2}
   <tr>
   	<th>S.No</th>
     <th>ID</th>
+    <th>Product image</th>
     <th>Product name</th>
     <th>Description</th>
 	<th>Brand</th>
 	<th>Categoryname</th>
 	<th>Manufacturer</th>
-	<th>Price</th>
-	<th>Quantity</th>
+	<th>Price</th>	
 	<th>Stock</th>
 	<th>Edit</th>
 	<th>Delete</th>
@@ -57,13 +58,13 @@ tr:nth-child(even){background-color: #f2f2f2}
   <tr>
   <td>${status.count}</td>
   <td>${product.id}</td>
+  <td><img src="resources/images/product/${product.id}.jpg"/></td>
   <td>${product.productname}</td>
   <td>${product.description}</td>
   <td>${product.brand}</td>
   <td>${product.categoryname}</td>
   <td>${product.manufacturer}</td>
   <td>${product.price}</td>
-  <td>${product.quantity}</td>
   <td>${product.stock}</td>
   
   <td><a href="editProduct?id=${product.id}">Edit</a></td>

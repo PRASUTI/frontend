@@ -54,7 +54,7 @@ public class ProductController {
 		
 		model.addAttribute("isAdminClickedViewProductButton", "true");
 		
-		return "adminPage";
+		return "redirect:viewproduct";
 		
 	}
 	
@@ -74,21 +74,31 @@ public class ProductController {
 	public String deleteProducts(@RequestParam("id") String id, Model model){
 		
 		productDAO.delete(id);
-		return "viewproduct";
+		return "redirect:viewproduct";
 	}
 	
 	@RequestMapping("editProduct")
 	public String editProduct(@RequestParam ("id") String id, Model model){
 		Product product = productDAO.get(id);
+
+		List<Category> categoryList = categoryDAO.list();
+		List<Supplier> supplierList = supplierDAO.list();
+		model.addAttribute("categoryList", categoryList);
+		model.addAttribute("supplierList", supplierList);
 		model.addAttribute("product", product);
+		
 		model.addAttribute("editProductClicked", true);
-		return "viewproduct";
+		return "adminPage";
 		
 	}
-	@RequestMapping("productEdited")
+	@RequestMapping("afterEditProduct")
 	public String productEdited(@ModelAttribute Product product){
 		
 		productDAO.saveOrUpdate(product);
-		return "viewproduct";
+		return "redirect:viewproduct";
+	}
+	@ModelAttribute
+	public void Product(Model model){
+		model.addAttribute("isLoggedInAdmin", "true");
 	}
 }

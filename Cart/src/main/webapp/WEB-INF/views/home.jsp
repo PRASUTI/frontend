@@ -13,6 +13,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="engine1/style.css" />
 <script type="text/javascript" src="engine1/jquery.js"></script> -->
+<!-- <style>
+body {
+  position: relative;
+  background-image: url(https://res.cloudinary.com/dg1rxpors/image/upload/v1492590359/preview_t6cyhn.jpg);
+}
+</style> -->
 
 </head>
 <body>
@@ -27,11 +33,17 @@
 <%@ include file="signup.jsp" %>
 
 </c:when>
+<c:when test="${isUserClickedProductButton == 'true' }">
+<%@ include file="productdetail.jsp" %>
 
+</c:when>
 
 <c:otherwise>
 <%@ include file="carousel.jsp" %>
+<%@ include file="productlist.jsp" %>
+
 </c:otherwise>
 </c:choose>
+<%-- <%@include file="/WEB-INF/views/footer.jsp" %> --%>
 </body>
 </html>

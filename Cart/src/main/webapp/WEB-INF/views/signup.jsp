@@ -193,10 +193,13 @@ span.psw {
     <input type="password" id="pass" name="password" placeholder="Enter password">
     
     <label><b>Contact Number</b></label>
-    <input type="text" id="contactnumber" name="contactnumber" placeholder="Enter contactnumber">
+    <input type="text" id="contactnumber" name="mobile" placeholder="Enter contactnumber">
 
     <label><b>Address</b></label>
     <input type="text" id="address" name="address" placeholder="Enter Address">
+    
+     <label><b>Zipcode</b></label>
+    <input type="text" id="zipcode" name="zipcode" placeholder="Enter zipcode">
        
     <div class="clearfix">
      

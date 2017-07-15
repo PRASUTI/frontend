@@ -78,9 +78,9 @@ span.psw {
 <center><h2>Login Form</h2></center>
 
 <form  action="isvaliduser" method="post">
-  <div class="imgcontainer">
+  <!-- <div class="imgcontainer">
     <img src="resources/images/img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+  </div> -->
 
   <div class="container">
     <label><b>Username</b></label>
